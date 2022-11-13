@@ -1,0 +1,192 @@
+A. 회원 가입시
+프론트 -> 서버
+
+{
+    "id" : "사용자 입력값",
+    "password" : "사용자 입력 값",
+    "email" : "사용자 입력 값"
+}
+
+서버 -> 프론트
+1. 성공
+{
+    "statusCode" : 200,
+    "message" : "회원가입에 성공하셨습니다"
+}
+
+2. 실패
+-1. 이미 가입한 ID가 존재
+{
+    "statusCode" : 400,
+    "message" : "이미 중복된 ID가 있습니다"
+}
+
+// 자동 로그인 (쿠키)는 보류
+
+B. 비밀번호 찾기
+프론트 -> 서버
+{
+    "id" : input_id,
+    "email" : input_email
+}
+
+서버 -> 프론트
+1. 성공
+{
+    "statusCode" : 200,
+    "message" : "비밀번호 찾기 성공",
+    "password" : "사용자의 password" 
+}
+
+2. 실패
+-1. 일치한 ID가 없거나 있어도 이메일이 일치하지 않을때
+{
+    "statusCode" : 401,
+    "message" : "이메일과 아이디가 일치하지 않습니다"
+}
+
+
+C. 로그인
+프론트 -> 서버
+{
+    "id" : input_id,
+    "password" : input_password
+}
+
+서버 -> 프론트
+1. 성공
+//생략
+
+2. 실패
+-1. ID가 틀린 경우
+{
+    "statusCode" : 402,
+    "message" : "가입된 ID가 없습니다"
+}
+
+-2. 비밀번호가 틀린 경우
+{
+    "statusCode" : 403,
+    "message" : "비밀번호가 일치하지 않습니다"
+}
+
+D. 회원 정보 수정
+프론트 -> 서버
+{
+    "id" : input_id,
+    "new_password" : input_password
+}
+
+서버->프론트
+1. 성공
+//생략
+
+E. 찜목록
+//별표 버튼 클릭시
+{
+    "id" : input_id,
+    "movie_id" : movie_id
+}
+
+
+
+--수정 및 추가
+로그인시, 아이디와 비밀번호만
+비밀번호 찾기시, 아이디까지 같이 출력
+회원가입시, 이름 필요
+찜하기 기능, 테이블 생성
+문의하기 테이블 생성
+
+--메인 화면
+
+{
+    "page" : "main"
+}
+
+최신영화 , 인기 , 상영예정 각각 10개씩
+트레일러는 5개
+{
+    "trailer" : [
+        {"movie1" : [
+            "id" : "고유id",
+            "youtube_url" : "유튜브주소"
+            "like" : "true"
+        }
+        ...
+    ],
+    "category1" : [
+        {"movie1" : [
+            "id" : "고유id",
+            "poster_url" : "포스터주소"
+        }
+        ...
+    ],
+    "category2" : [
+        {"movie1" : [
+        "id" : "고유id",
+        "poster_url" : "포스터주소"
+        }
+        ...
+    ],
+    "category3" : [
+        {"movie1" : [
+        "id" : "고유id",
+        "poster_url" : "포스터주소"
+        }
+        ...
+    ],
+        
+}
+
+
+---영화 상세페이지
+
+프론트 -> 서버
+{
+    "page" : "detail",
+    "id" : "고유id"
+}
+
+서버 -> 프론트
+{
+    썸네일URL, 줄거리
+    제목 상영시간, 개봉일, 평점, 줄거리
+    배우이름, 배우사진
+}
+
+
+검색관련
+필터링 : 제목, 배우, 감독
+일단 한글 검색만
+
+배우는 cast -> name
+
+cast
+{
+"adult": false,
+"gender": 2,
+"id": 741,
+"known_for_department": "Acting",
+"name": "River Phoenix",
+"original_name": "River Phoenix",
+"popularity": 14.339,
+"profile_path": "/2kAB7jDmPfEa6BTmXlGcidCzMSz.jpg",
+"cast_id": 14,
+"character": "Young Indy",
+"credit_id": "52fe4216c3a36847f8002e35",
+"order": 6
+}
+crew
+{
+"adult": false,
+"gender": 2,
+"id": 32487,
+"known_for_department": "Costume & Make-Up",
+"name": "Robert L. Stevenson",
+"original_name": "Robert L. Stevenson",
+"popularity": 0.839,
+"profile_path": null,
+"credit_id": "5718143d925141282f002158",
+"department": "Costume & Make-Up",
+"job": "Hairstylist"
+},
