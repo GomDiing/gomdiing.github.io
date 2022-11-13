@@ -63,7 +63,8 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
+search                   : true
+# true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 lunr:
@@ -300,6 +301,7 @@ defaults:
       share: true
       related: true
       show_date: true
+      sidebar_main: true
 
   # _pages
   - scope:
@@ -313,3 +315,4 @@ defaults:
       share: true
       related: false
       show_date: true
+      sidebar_main: true

@@ -7,7 +7,7 @@ main:
   - title: "About"
     url: /about/
   - title: "윤동주 작품 모음집"
-    url: /categories/윤동주/
+    url: categories/eun
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
