@@ -6,8 +6,8 @@ main:
     url: /categories/
   - title: "About"
     url: /about/
-  - title: "윤동주 작품 모음집"
-    url: categories/eun
+  # - title: "윤동주 작품 모음집"
+    # url: categories/Eun
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

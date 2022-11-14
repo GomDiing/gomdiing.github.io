@@ -112,7 +112,7 @@ analytics:
 # Site Author
 author:
   name             : "GomDiing"
-  avatar           : "/assets/images/keyboard_HHKB.jpg"
+  avatar           : "/assets/images/logo_g.png"
   # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "돈도 벌고 개발도 하고 싶은 개발 블로그"
   location         : "South Korea"

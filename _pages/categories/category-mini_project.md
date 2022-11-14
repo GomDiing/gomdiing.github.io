@@ -1,13 +1,12 @@
 ---
-title: "윤동주 작품집"
-permalink: categories/Eun
+title: "미니 프로젝트"
+permalink: categories/miniProject
 layout: category
 author_profile: true
-
 sidebar_main: true
 ---
 
-좋아하는 윤동주 시인의 작품 모음입니다.
+프로젝트 카테고리 모음집입니다
 
-{% assign posts = site.categories.Eun %}
+{% assign posts = site.categories['Mini Project'] %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
