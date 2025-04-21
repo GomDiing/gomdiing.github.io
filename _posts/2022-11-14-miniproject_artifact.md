@@ -1,7 +1,6 @@
 ---
 title:  "미니 프로젝트 - 백엔드 구조"
 excerpt: "미니 프로젝트"
-
 categories:
   - miniProject
 tags:

@@ -19,7 +19,14 @@
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
                     {% if category[0] == "miniProject" %}
-                        <li><a href="/categories/#miniProject" class="">Mini Project({{category[1].size}})</a></li>
+                        <li><a href="/categories/miniProject" class="">Mini Project({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "qualifications" %}
+                        <li><a href="/categories/qualifications" class="">자격증({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
