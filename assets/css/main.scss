@@ -5,6 +5,46 @@ search: false
 
 @charset "utf-8";
 
+// @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+// @import "minimal-mistakes"; // main partials
+// @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean');
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+// 나눔고딕 폰트를 기본 폰트로 설정
+$serif: "Nanum Gothic", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$sans-serif: "Nanum Gothic", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$monospace: "Nanum Gothic", Monaco, Consolas, "Lucida Console", monospace !default;
+
+  
+strong, b, bold {
+    font-weight: 510 !important; /* 더 굵게 (기본값은 보통 700) */
+}
+  
+.small {
+    font-size: 0.8em;
+} 
+
+.smaller {
+    font-size: 0.6em;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.highlight {
+    color: #FF9900;
+}
+
+.bu {
+    font-weight: bold;
+    text-decoration: underline;
+}
