@@ -1,5 +1,5 @@
 ---
-title: "미니 프로젝트"
+title: "코딩테스트"
 permalink: categories/codingTest
 layout: category
 author_profile: true
